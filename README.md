@@ -16,67 +16,68 @@ Here are the tasks:
 
 1.	Retrieve the weather data 
 
-(1)	Used random.uniform() function in Numpy to create 2,000 random latitudes and longitudes. 
+   (1) 	Used random.uniform() function in Numpy to create 2,000 random latitudes and longitudes. 
 
-(2)	Then used zip() function to create tuples for each pair of latitude and longitude. Since the zipped tuple can only be unzipped once before it is removed from the computer’s memory, added the latitudes and longitudes to a list. 
+   (2) 	Then used zip() function to create tuples for each pair of latitude and longitude. Since the zipped tuple can only be unzipped once before it is removed from the                 computer’s memory, added the latitudes and longitudes to a list. 
 
-(3)	Used citypy.nearest_city() to identify the nearest city for each latitude and longitude combination, saved in cities list. 
+   (3) 	Used citypy.nearest_city() to identify the nearest city for each latitude and longitude combination, saved in cities list. 
 
-(4)	Looped though all the city in the cities list, run the API request to get the JSON file that contains all the information we need. Then parsed the JSON file and get the latitude, longitude, maximum temperature, percent of humidity, percent of cloudiness, wind speed, country, and current weather description and stored them in each variables. Saved all the information in city_data list.
+   (4) 	Looped though all the city in the cities list, run the API request to get the JSON file that contains all the information we need. Then parsed the JSON file and get             the latitude, longitude, maximum temperature, percent of humidity, percent of cloudiness, wind speed, country, and current weather description and stored them in each           variables. Saved all the information in city_data list.
 
-(5)	Created a DataFrame from the city_data list, then reordered the columns.
+   (5) 	Created a DataFrame from the city_data list, then reordered the columns.
 
-(6)	Export the data to CSV file.
+   (6) 	Export the data to CSV file.
 
 2.	  Create a Customer Travel Destinations Map.
-(1)	Read in the CSV file created from the first task. 
 
-(2)	Prompted the user to enter the minimum and maximum temperature and stored the values in variables. These variables will be used to filter the data in following step.
+   (1) 	Read in the CSV file created from the first task. 
 
-(3)	Created a new DataFrame by using the variables created from step(2) to filter the city data dataframe. 
+   (2) 	Prompted the user to enter the minimum and maximum temperature and stored the values in variables. These variables will be used to filter the data in following step.
 
-(4)	Removed the records with missing values.
+   (3)	Created a new DataFrame by using the variables created from step(2) to filter the city data dataframe. 
 
-(5)	Created a dataframe with city, country, max temperature, current weather description, latitude and longitude as the columns. Added a blank column for hotel name.
+   (4)	Removed the records with missing values.
 
-(6)	Get the hotel name from Google Direction API based on the latitude and longitude from the dataframe. Insert the values into the dataframe.
+   (5)	Created a dataframe with city, country, max temperature, current weather description, latitude and longitude as the columns. Added a blank column for hotel name.
 
-(7)	Remove the records with missing values to get the final cleaned dataframe for hotel.
+   (6)	Get the hotel name from Google Direction API based on the latitude and longitude from the dataframe. Insert the values into the dataframe.
 
-(8)	Output the dataframe to a CSV file.
+   (7)	Remove the records with missing values to get the final cleaned dataframe for hotel.
 
-(9)	Created the map.
+   (8)	Output the dataframe to a CSV file.
+
+   (9)	Created the map.
 
 3.	Create a Travel Itinerary Map.
 
-(1)	Read in the CSV file created from task 2.
+   (1)	Read in the CSV file created from task 2.
 
-(2)	Created a heatmap, and pick 4 cities to create a vacation itinerary route to travel between the four cities. 
+   (2)	Created a heatmap, and pick 4 cities to create a vacation itinerary route to travel between the four cities. 
 
 
 ## Results
 
 1.	The sample of final WeatherPy Database. 
 
-![ins1](https://user-images.githubusercontent.com/79289806/113497630-fab35880-94d3-11eb-8b69-be6fd39d7201.png)
+    ![ins1](https://user-images.githubusercontent.com/79289806/113497630-fab35880-94d3-11eb-8b69-be6fd39d7201.png)
 
 2.	The hotel information dataframe:
 
-![ins2](https://user-images.githubusercontent.com/79289806/113497631-fb4bef00-94d3-11eb-9705-d7f7c3d5a55d.png) 
+    ![ins2](https://user-images.githubusercontent.com/79289806/113497631-fb4bef00-94d3-11eb-9705-d7f7c3d5a55d.png) 
 
-Customer Travel Destinations Map:
+    Customer Travel Destinations Map:
 
-![ins3](https://user-images.githubusercontent.com/79289806/113497632-fb4bef00-94d3-11eb-8fd2-33e54016d524.png) 
+    ![ins3](https://user-images.githubusercontent.com/79289806/113497632-fb4bef00-94d3-11eb-8fd2-33e54016d524.png) 
 
 3.	New dataframe for the 4 cities:
 
-![ins4](https://user-images.githubusercontent.com/79289806/113497633-fb4bef00-94d3-11eb-9d86-39cf10370dfd.png) 
+    ![ins4](https://user-images.githubusercontent.com/79289806/113497633-fb4bef00-94d3-11eb-9d86-39cf10370dfd.png) 
 
-Travel Itinerary Map:
+    Travel Itinerary Map:
 
-![ins5](https://user-images.githubusercontent.com/79289806/113497634-fb4bef00-94d3-11eb-9cc0-a5d903378cad.png)  
+    ![ins5](https://user-images.githubusercontent.com/79289806/113497634-fb4bef00-94d3-11eb-9cc0-a5d903378cad.png)  
 
-![ins6](https://user-images.githubusercontent.com/79289806/113497635-fbe48580-94d3-11eb-8986-434e75aadff3.png) 
+    ![ins6](https://user-images.githubusercontent.com/79289806/113497635-fbe48580-94d3-11eb-8986-434e75aadff3.png) 
 
 ## Summary: 
 
